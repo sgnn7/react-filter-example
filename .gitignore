@@ -1,0 +1,6 @@
+node_modules/
+lib/
+public/js/bundle.js
+
+# Vim swapfiles
+*.sw[po]
