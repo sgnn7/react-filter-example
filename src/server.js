@@ -26,7 +26,22 @@ app.get('/', (req, res) => {
 app.get('/collectives', (req, res) => {
     // TODO: Only send needed fields
     const filter = req.query.filter;
-    Collectives.find({ name: new RegExp(filter, 'i') }).then(results => {
+
+    // TODO: Boolean fields should be imported better
+    const queryParams = {
+        name: new RegExp(filter, 'i'),
+        deletedAt: { $exists: false },
+        isActive: { $ne: "FALSE" },
+    };
+
+    const returnedFields = {
+        id: 1,
+        name: 1,
+        description: 1,
+        image: 1,
+    };
+
+    Collectives.find(queryParams, returnedFields).then(results => {
         res.json(results);
     });
 });
