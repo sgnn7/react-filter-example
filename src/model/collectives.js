@@ -5,14 +5,14 @@ import mongoose from 'mongoose';
 const { Model, Schema } = mongoose
 
 const schema = new Schema({
-    id: Number,
-    name: String,
+    id: {type: [Number], index: true},
+    name: {type:  [String], index: true},
     description: String,
     currency: String,
-    createdAt: Date,
+    createdAt: {type: [Date], index: true},
     updatedAt: Date,
     deletedAt: Date,
-    isActive: String,
+    isActive: {type: [String], index: true},
     longDescription: String,
     image: String,
     slug: String,
@@ -20,9 +20,9 @@ const schema = new Schema({
     twitterHandle: String,
     mission: String,
     backgroundImage: String,
-    tags: String,
+    tags: {type: [String], index: true},
     isSupercollective: String,
-    type: String,
+    type: {type: [String], index: true},
     data: String,
 });
 
