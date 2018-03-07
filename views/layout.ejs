@@ -3,14 +3,44 @@
 <html lang="en">
     <head>
         <title>React Example Filter App</title>
+
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+              crossorigin="anonymous">
+
+        <link rel='stylesheet'
+              href='https://unpkg.com/react-select/dist/react-select.css' />
     </head>
 
     <body class="container">
-        <header>
-            <h1>React Example Filter App</h1>
-        </header>
+        <nav class="navbar navbar-inverse bg-inverse fixed-top ">
+            <a class="navbar-brand" href="#">
+              <img class="mb-1 mr-2"
+                   src="https://cldup.com/rdmBCmH20l.png"
+                   width="35"
+                   height="35"
+                   alt="">
+              Collection Filtering Example
+            </a>
+        </nav>
 
-        <section id="content"><%- content %></section>
+        <div class="container mt-5 pt-5">
+            <section id="content"><%- content %></section>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+                integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+                integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+                integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+                crossorigin="anonymous">
+        </script>
 
         <script src="/js/bundle.js"></script>
     </body>

@@ -1,7 +1,9 @@
+'use strict';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CollectiveFilter from './components/CollectiveFilter';
+import CollectiveSearch from './components/CollectiveSearch';
 
-ReactDOM.render(<CollectiveFilter />,
-                document.getElementById('content'));
+ReactDOM.hydrate(<CollectiveSearch />,
+                 document.getElementById('content'));
